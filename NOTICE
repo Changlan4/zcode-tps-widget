@@ -1,0 +1,36 @@
+NOTICE
+======
+
+ZCode 实时速度方框（zcode-tps-widget）在数据口径与浮层机制上参考/移植了以下
+MIT 许可项目，特此致谢并保留其许可要求。
+
+一、数据口径思路（只借鉴算法，未复制代码）
+
+    shy3130 / zcode-tps-monitor
+    https://github.com/shy3130/zcode-tps-monitor
+    MIT License
+    —— turn_id 口径、--current 守卫、多段加权。
+
+    yujuntea / zcode-tps-marketplace
+    https://github.com/yujuntea/zcode-tps-marketplace
+    MIT License
+    —— decode 口径、只读 model_usage。
+
+2. 桌面浮层的定位 / 鼠标穿透 / 合成自愈机制，移植自同作者的会话用量方框挂件
+   （`zcode-whale-widget`），后者本身是下面这个项目的移植版：
+
+    MeteorNOX / DeepSeek-Balance-Whale-Widget
+    https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget
+    Copyright (c) 2026 MeteorNOX
+    MIT License（见本目录 LICENSE）
+
+   沿用自挂件的部分：透明无边框置顶窗口的创建与参数、`setIgnoreMouseEvents`
+   穿透与指针接管、`screenToDipRect` 视口换算、GPU 合成器自愈、常驻
+   PowerShell 跟随脚本（`desktop/follow-window.ps1`）的窗口贴合逻辑。这些在
+   本仓库的 `desktop/` 与 `lib/overlay.mjs` 中按同一套做法重写。
+
+3. UI 视觉语言（底色/圆角/边框/阴影/色板）刻意与会话用量方框保持一致，属于
+   同作者的配套设计，不涉及第三方素材。
+
+本插件自身为原创实现：metrics 计算与修正、会话跟随（客户端日志增量扫描）、
+不空框的 localStorage 缓存、服务与 MCP/命令/skill 适配层均新写。

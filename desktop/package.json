@@ -1,0 +1,7 @@
+{
+  "name": "zcode-tps-overlay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transparent always-on-top overlay window that hosts the ZCode live speed box.",
+  "main": "main.cjs"
+}

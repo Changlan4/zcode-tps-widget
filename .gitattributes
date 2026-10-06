@@ -1,0 +1,5 @@
+# 统一换行符，避免跨平台协作时整文件 diff
+* text=auto eol=lf
+
+# PowerShell 脚本在 Windows 上更习惯 CRLF
+*.ps1 text eol=crlf

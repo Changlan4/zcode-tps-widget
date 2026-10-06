@@ -1,0 +1,20 @@
+{
+  "name": "zcode-tps-local",
+  "version": 1,
+  "description": "Local marketplace for the ZCode live speed box.",
+  "plugins": [
+    {
+      "name": "zcode-tps-widget",
+      "version": "1.0.0",
+      "description": "ZCode 实时速度方框：浮在会话用量方框上方，显示本问即时输出速率（含思考 token，多段按段加权）、首 token 延迟（TTFT）与采样时刻。只读本地用量库，配套桌面浮层、/speed 命令与 MCP 工具。",
+      "source": ".",
+      "displayName": "ZCode TPS Widget",
+      "displayName_i18n": { "zh-CN": "ZCode 实时速度方框" },
+      "description_i18n": {
+        "en": "Live token-speed box for ZCode: sits directly above the session usage box and shows the current turn's output rate (reasoning tokens included, segment-weighted), first-token latency (TTFT) and the sampling instant.",
+        "zh-CN": "ZCode 实时速度方框：浮在会话用量方框上方，显示本问即时输出速率（含思考 token，多段按段加权）、首 token 延迟（TTFT）与采样时刻。"
+      },
+      "category": "developer-tools"
+    }
+  ]
+}
